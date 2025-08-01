@@ -756,20 +756,20 @@ canvas#radarChart {
 
 .action-buttons button {
   margin: 10px 5px;
-  background: linear-gradient(135deg, #6ec6ff, #81c784);
+  background: linear-gradient(to right, #51C2CF, #A18CFF);
   color: #ffffff;
   font-weight: bold;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
   border: none;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s;
 }
 
 .action-buttons button:hover {
-  background: linear-gradient(135deg, #64b5f6, #66bb6a);
+  background: linear-gradient(to right, #51C2CF, #A18CFF);
   transform: translateY(-2px);
 }
 
@@ -812,6 +812,7 @@ canvas#radarChart {
 }
 .entry-form h3 {
   text-align: center;
+  font-size: 1.4rem;
   margin-bottom: 1em;
 }
 .entry-form label {
@@ -995,13 +996,13 @@ canvas#radarChart {
   background: linear-gradient(180deg, #f2fcfc 0%, #e6f6f4 50%, #fefefe 100%);
 }
 .mascot-share h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #0093c4;
   margin-bottom: 10px;
 }
 .mascot-share p {
   color: #555;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 .share-buttons button {
@@ -1009,14 +1010,15 @@ canvas#radarChart {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(135deg, #5ee7df, #b490ca);
+  background: linear-gradient(to right, #51C2CF, #A18CFF);
   color: #fff;
   cursor: pointer;
+  font-size: 1.2rem;
   transition: background 0.3s, transform 0.2s;
 }
 .share-buttons button:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #4dd8d1, #a47fc1);
+  background: linear-gradient(to right, #51C2CF, #A18CFF);
 }
 
 /* ===== 祝福牆 Banner ===== */
@@ -1139,8 +1141,8 @@ canvas#radarChart {
 .text-blessing p {
   color: #555;
   margin-bottom: 30px;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 .form-wrapper {
@@ -1214,7 +1216,7 @@ canvas#radarChart {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #333;
   font-weight: bold;
   margin-bottom: 8px;
@@ -1263,18 +1265,21 @@ canvas#radarChart {
 
 .promo-card .btn {
   display: inline-block;
-  background-color: #00a9a5;
+  background: linear-gradient(to right, #51C2CF, #A18CFF);
   color: white;
   padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease;
 }
 
 .promo-card .btn:hover {
-  background-color: #007f7c;
+  background: linear-gradient(to right, #4db8c9, #9f7fe0);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(2px);
 }
 
 @media (max-width: 767px) {
