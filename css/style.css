@@ -1173,91 +1173,156 @@ canvas#radarChart {
 
 /* ===== 優惠活動 ===== */
 .promo-section {
-  padding: 40px 20px 40px;
-  margin-top: -40px;
-  background: linear-gradient(to bottom, #eaf9f6, #f4fdfd);
+  padding: 10px 10px;
+  background-color: #e6f7f7;
   text-align: center;
 }
 
-.promo-section .section-title {
+.section-title {
   font-size: 2rem;
-  color: #008a8a;
-  margin-bottom: 40px;
+  color: #007a7a;
+  margin-bottom: 4px;
+}
+
+.promo-period {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .promo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 30px;
-  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .promo-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.promo-card:hover {
-  transform: translateY(-5px);
-}
-
-.promo-card img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px 14px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+  width: 45%;
+  min-width: 300px;
+  box-sizing: border-box;
 }
 
 .promo-title {
-  font-size: 1.2rem;
-  color: #008a8a;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .promo-card p {
   font-size: 0.95rem;
-  color: #444;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.promo-desc {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.promo-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 12px auto 16px auto;
+  max-width: 300px; /* 控制整體寬度，不貼太邊邊 */
+  text-align: left;
+}
+
+.promo-checklist li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #333;
   line-height: 1.5;
 }
 
-.promo-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.promo-checklist li::before {
+  content: "✔️";
+  left: 0;
+  top: 0.05em;
   font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
 }
 
-.promo-list li::before {
-  content: "✔️ ";
+.promo-btn-wrapper {
+  text-align: center;
+  margin-top: 12px;
 }
 
-.btn {
+.promo-card .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #00b3b3;   /* 主色調：青藍色 */
+  background-color: #00a9a5;
   color: white;
-  font-weight: bold;
-  border-radius: 25px;
+  padding: 10px 20px;
+  border-radius: 30px;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #008a8a;
-  transform: translateY(-2px);
+.promo-card .btn:hover {
+  background-color: #007f7c;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .promo-grid {
-    grid-template-columns: 1fr;  /* 手機版變單欄 */
+    grid-template-columns: 1fr;
   }
+}
+
+/* 外層藍色背景容器 */
+.reward-section-wrapper {
+  background: #d7f4f5; /* 淺藍色背景，與主頁一致 */
+  padding: 60px 20px;
+}
+
+/* 白色卡片樣式 */
+.reward-rules.card-style {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* 章節標題 */
+.reward-rules.card-style h2 {
+  color: #005c5c;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 24px;
+  border-left: 6px solid #00aaaa;
+  padding-left: 12px;
+}
+
+/* 有序/無序清單 */
+.reward-rules.card-style ol,
+.reward-rules.card-style ul {
+  padding-left: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.reward-rules.card-style ul {
+  list-style-type: disc;
+}
+
+.reward-rules.card-style p {
+  margin: 0.5rem 0;
 }
