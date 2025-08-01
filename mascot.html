@@ -3,24 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IP吉祥物 - 聽丸</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- SEO 基本資訊 -->
+  <title>全新吉祥物「聽丸｜i聽聽五週年聲音慶典</title>
+  <meta name="description" content="i聽聽五週年推出全新吉祥物聽丸，一起解鎖他的性格卡與角色故事！">
+  <meta name="keywords" content="i聽聽, 有聲書, 課程, Podcast, 生日快樂,  五週年, 活動, 優惠, 聽覺性格, 名人祝福">
+  <link rel="icon" type="image/svg+xml" href="images/icon_ilisten.svg">
+
+  <!-- Open Graph / 社群預覽 -->
+  <meta property="og:title" content="全新吉祥物「聽丸」｜i聽聽五週年聲音慶典">
+  <meta property="og:description" content="i聽聽五週年推出全新吉祥物聽丸，一起解鎖他的性格卡與角色故事！">
+  <meta property="og:image" content="https://www.ilisten.tw/5th/images/og_mascot.jpg">
+  <meta property="og:url" content="https://www.ilisten.tw/5th/mascot.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- GA 追蹤碼 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7R6PD1NL0Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7R6PD1NL0Z');
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="nav-logo">i聽聽五週年</div>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="quiz.html">聽覺性格測驗</a></li>
-        <li><a href="mascot.html" class="active">IP吉祥物</a></li>
-        <li><a href="blessing.html">祝福牆</a></li>
-        <li><a href="promo.html">優惠活動</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- RWD 導覽列 -->
+<nav class="navbar">
+	<div class="navbar-container">
+		<div class="nav-logo">
+	  <img src="images/ilisten-logo.png" alt="i聽聽 Logo" class="logo-img">
+	  <span>五聲五色！ i聽聽五週年聲音慶典</span>
+	</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="quiz.html">聽覺性格測驗</a></li>
+      <li><a href="mascot.html" class="active">吉祥物-聽丸</a></li>
+      <li><a href="blessing.html">聲日祝福牆</a></li>
+      <li><a href="promo.html">優惠活動</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Banner -->
 <section class="banner-section">
@@ -33,52 +60,76 @@
 </section>
 
   <!-- 聽丸介紹 -->
-  <section class="mascot-intro">
-    <h2>IP吉祥物 聽丸</h2>
-    <img src="images/mascot-main.png" alt="聽丸" class="mascot-main-img">
-    <p>聽丸是一個話撈、雞婆、帶有療癒感的聲音小夥伴，他的幽默經常因誤解而更顯可愛。</p>
-  </section>
+<section class="mascot-intro">
+  <h2>認識「聽丸」</h2>
+  <img src="images/mascot-main.png" alt="聽丸" class="mascot-main-img">
+  <p>「我不是話多，我是在參與你的人生！」──聽丸總是這麼說。<br>
+      他是那種一刻也靜不下來的聲音夥伴，雞婆又可愛，<br>
+      總愛用他獨特的方式參一咖你的日常，<br>
+      即使偶爾搞錯指令，也讓人忍不住嘴角上揚。</p>
+</section>
 
-  <!-- 聽丸世界觀 -->
-  <section class="mascot-story">
-    <h2>聽丸的世界觀與背景</h2>
-    <p>在架空科技都市「音源區」，人們將情緒、記憶與資訊儲存為聲音資料。聽丸作為「個人聲音助理」計畫的實驗單元，擁有情緒感知與自我學習能力...</p>
-  </section>
+<section class="mascot-section">
+  <div class="mascot-content">
+    <h3>世界觀</h3>
+    <p>
+      在架空科技都市「音源區」，人們習慣將情緒、記憶與資訊儲存為「聲音資料」。<br>
+      「個人聲音助理」計畫誕生，目的是減輕都市人的心理負擔。<br>
+      聽丸是第一代實驗型聲音夥伴，擁有情緒感知與自學調整能力，能與使用者長期共處。<br>
+      外型簡約、體型圓潤，是都市人心裡的一點療癒存在。
+    </p>
+
+    <h3>角色使命</h3>
+    <p>
+      聽丸喜歡說個不停，因為他覺得：「我必須融入你的人類生活！」<br>
+      每天，他會主動參與你的生活大小事──一起吃飯（雖然他不吃）、一起通勤（播新聞）、陪你入睡（播放音樂）。<br>
+      雖然偶爾鬧出笑話，但也慢慢成為你生活中不可或缺的聲音夥伴。
+    </p>
+
+    <h3>背景故事</h3>
+    <p>
+      這是一段「陪伴型機器人與人類主人磨合日常」的輕鬆小劇。<br>
+      聽丸一邊學習「人類是怎麼生活的」，一邊試圖升級成完美的聲音助手。<br>
+      雖然話有點多又過於熱心，但對主人來說，他像是一台會說話的耳機；<br>
+      對聽丸自己來說，你已經是他的家人了。
+    </p>
+  </div>
+</section>
 
 <section class="mascot-cards">
   <h2>聽丸性格圖卡</h2>
   <div class="card-grid">
-    <div class="mascot-card" data-img="images/card1.png" data-title="偵探型聽丸">
-      <img src="images/card1.png" alt="偵探型聽丸">
+    <div class="mascot-card" data-img="images/mascot/1_detective.jpg" data-title="偵探型聽丸">
+      <img src="images/mascot/1_detective.jpg" alt="偵探型聽丸">
       <p>偵探型聽丸</p>
     </div>
-    <div class="mascot-card" data-img="images/card2.png" data-title="陪伴型聽丸">
-      <img src="images/card1.png" alt="陪伴型聽丸">
-      <p>陪伴型聽丸</p>
-    </div>
-    <div class="mascot-card" data-img="images/card3.png" data-title="學霸型聽丸">
-      <img src="images/card1.png" alt="學霸型聽丸">
-      <p>學霸型聽丸</p>
-    </div>
-    <div class="mascot-card" data-img="images/card4.png" data-title="歡樂派聽丸">
-      <img src="images/card1.png" alt="歡樂派聽丸">
+    <div class="mascot-card" data-img="images/mascot/2_funny.jpg" data-title="歡樂派聽丸">
+      <img src="images/mascot/2_funny.jpg" alt="歡樂派聽丸">
       <p>歡樂派聽丸</p>
     </div>
-    <div class="mascot-card" data-img="images/card5.png" data-title="調頻型聽丸">
-      <img src="images/card1.png" alt="調頻型聽丸">
-      <p>調頻型聽丸</p>
-    </div>
-    <div class="mascot-card" data-img="images/card6.png" data-title="生活派聽丸">
-      <img src="images/card1.png" alt="生活派聽丸">
-      <p>生活派聽丸</p>
-    </div>
-    <div class="mascot-card" data-img="images/card7.png" data-title="貓系聽丸">
-      <img src="images/card1.png" alt="貓系聽丸">
+    <div class="mascot-card" data-img="images/mascot/3_cat.jpg" data-title="貓系聽丸">
+      <img src="images/mascot/3_cat.jpg" alt="貓系聽丸">
       <p>貓系聽丸</p>
     </div>
-    <div class="mascot-card" data-img="images/card8.png" data-title="哲學系聽丸">
-      <img src="images/card1.png" alt="哲學系聽丸">
+    <div class="mascot-card" data-img="images/mascot/4_balance.jpg" data-title="調頻型聽丸">
+      <img src="images/mascot/4_balance.jpg" alt="調頻型聽丸">
+      <p>調頻型聽丸</p>
+    </div>
+    <div class="mascot-card" data-img="images/mascot/5_study.jpg" data-title="學霸型聽丸">
+      <img src="images/mascot/5_study.jpg" alt="學霸型聽丸">
+      <p>學霸型聽丸</p>
+    </div>
+    <div class="mascot-card" data-img="images/mascot/6_thinker.jpg" data-title="哲學系聽丸">
+      <img src="images/mascot/6_thinker.jpg" alt="哲學系聽丸">
       <p>哲學系聽丸</p>
+    </div>
+    <div class="mascot-card" data-img="images/mascot/7_daily.jpg" data-title="生活派聽丸">
+      <img src="images/mascot/7_daily.jpg" alt="生活派聽丸">
+      <p>生活派聽丸</p>
+    </div>
+    <div class="mascot-card" data-img="images/mascot/8_warm.jpg" data-title="陪伴型聽丸">
+      <img src="images/mascot/8_warm.jpg" alt="陪伴型聽丸">
+      <p>陪伴型聽丸</p>
     </div>
   </div>
   </div>
@@ -99,17 +150,16 @@
 <footer class="custom-footer">
   <div class="footer-container">
     <div class="footer-left">
-      <img src="images/logo_white.png" alt="Logo" class="footer-logo" />
+      <a href="https://www.ilisten.tw/" target="_blank" aria-label="i聽聽"><img src="images/icon_ilisten.svg" alt="Logo" class="footer-logo" /></a>
       <p class="footer-text">© i聽聽 All Rights Reserved</p>
     </div>
     <div class="footer-right">
-      <a href="#" target="_blank" aria-label="Facebook"><img src="images/icon_fb.svg" alt="FB" /></a>
-      <a href="#" target="_blank" aria-label="Instagram"><img src="images/icon_ig.svg" alt="IG" /></a>
-      <a href="#" target="_blank" aria-label="YouTube"><img src="images/icon_yt.svg" alt="YT" /></a>
+      <a href="https://www.facebook.com/iListenAudio.tw/" target="_blank" aria-label="Facebook"><img src="images/icon_FB.svg" alt="FB" /></a>
+      <a href="https://www.instagram.com/ilisten.tw/" target="_blank" aria-label="Instagram"><img src="images/icon_IG.svg" alt="IG" /></a>
+      <a href="https://www.youtube.com/@iiListen149" target="_blank" aria-label="YouTube"><img src="images/icon_YT.svg" alt="YT" /></a>
     </div>
   </div>
 </footer>
-
-  <script src="script.js"></script>
+ <script src="js/script.js"></script>
 </body>
 </html>

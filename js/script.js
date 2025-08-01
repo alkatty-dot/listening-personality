@@ -521,7 +521,7 @@ if (mascotPage) {
     if (!selectedCard) return alert("請先選擇一張聽丸圖卡！");
     const a = document.createElement('a');
     a.href = selectedCard;
-    a.download = "聽丸.png";
+    a.download = "聽丸.jpg";
     a.click();
   };
 }
