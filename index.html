@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO 基本資訊 -->
+  <title>i聽聽｜五聲五色！i聽聽五週年聲音慶典</title>
+  <meta name="description" content="i聽聽五週年活動網站上線！邀請大家一起探索「聽覺性格」、留下聲日祝福，和我們一起聽見世界的五聲五色。">
+  <meta name="keywords" content="i聽聽, 有聲書, 課程, Podcast, 生日快樂,  五週年, 活動, 優惠, 聽覺性格, 名人祝福">
+  <link rel="icon" type="image/svg+xml" href="images/icon_ilisten.svg">
+
+  <!-- Open Graph / 社群預覽 -->
+  <meta property="og:title" content="i聽聽｜五聲五色！i聽聽五週年聲音慶典">
+  <meta property="og:description" content="歡慶五週年！探索你的「聽覺性格」、留下聲日祝福，和我們一起聽見世界的五聲五色。">
+  <meta property="og:image" content="https://www.ilisten.tw/5th/images/Banner_1200x630.jpg">
+  <meta property="og:url" content="https://www.ilisten.tw/5th/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- GA 追蹤碼 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7R6PD1NL0Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7R6PD1NL0Z');
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <!-- RWD 導覽列 -->
+<nav class="navbar">
+	<div class="navbar-container">
+		<div class="nav-logo">
+	  <img src="images/ilisten-logo.png" alt="i聽聽 Logo" class="logo-img">
+	  <span>五聲五色！ i聽聽五週年聲音慶典</span>
+	</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">首頁</a></li>
+      <li><a href="quiz.html">聽覺性格測驗</a></li>
+      <li><a href="mascot.html">吉祥物-聽丸</a></li>
+      <li><a href="blessing.html">聲日祝福牆</a></li>
+      <li><a href="promo.html">優惠活動</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Banner -->
+<section class="banner-section">
+  <picture class="banner-picture">
+    <!-- 手機版 BN -->
+    <source media="(max-width: 768px)" srcset="images/Banner_index_phone.jpg">
+    <!-- 桌機版 BN -->
+    <img src="images/Banner_index_web.jpg" alt="i聽聽五週年慶典" class="banner-image">
+  </picture>
+</section>
+
+<!-- Timeline 區塊 -->
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>i聽聽五週年，用聲音陪你一路前行</h2>
+    <p class="subhead accent">我們相信，每一段聲音，都能走進你的生活。</p>
+  </div>
+  <div class="timeline-horizontal" id="timeline">
+    <div class="time-node" data-year="2020" data-title="APP正式上線" data-desc="i聽聽APP正式上線！首度於中華電信亮相，短短半年即吸引近兩萬用戶，一起開啟聲音內容的新篇章。">
+      <div class="dot"></div>
+      <p class="year">2020</p>
+      <p class="title">APP正式上線</p>
+    </div>
+
+    <div class="time-node" data-year="2021" data-title="林志玲耳朵導覽展" data-desc="與南美館合作，林志玲擔任《用耳朵看展覽》客座主持人，跟著她的聲音，一起漫步藝術殿堂。">
+      <div class="dot"></div>
+      <p class="year">2021</p>
+      <p class="title">林志玲耳朵導覽展</p>
+    </div>
+
+    <div class="time-node" data-year="2022" data-title="繪本全國巡展" data-desc="攜手國立公共資訊圖書館，展開《原創繪本大解密》全國巡展，聲音成為通往繪本世界的橋樑，深入探索台灣原創故事的靈魂。">
+      <div class="dot"></div>
+      <p class="year">2022</p>
+      <p class="title">繪本全國巡展</p>
+    </div>
+
+    <div class="time-node" data-year="2023" data-title="首度發表閱聽報告" data-desc="首度發表《閱聽報告》，累積8,553,509分鐘聆聽時長，描繪出台灣用戶的聲音生活樣貌與偏好足跡。">
+      <div class="dot"></div>
+      <p class="year">2023</p>
+      <p class="title">首度發表閱聽報告</p>
+    </div>
+
+    <div class="time-node" data-year="2024" data-title="台灣有聲劇多部發表" data-desc="聚焦台灣在地文化，推出《禁忌系列》、《台灣風土系列》等原創有聲劇，用耳朵認識我們的土地與故事。">
+      <div class="dot"></div>
+      <p class="year">2024</p>
+      <p class="title">台灣有聲劇多部發表</p>
+    </div>
+
+    <div class="time-node active" data-year="2025" data-title="五週年聲音慶典" data-desc="i聽聽五週年歡慶登場！全新吉祥物「聽丸」亮相，搭配「聽覺性格測驗」，帶你發現專屬於自己的五聲五色。">
+      <div class="dot"></div>
+      <p class="year">2025</p>
+      <p class="title">五週年聲音慶典</p>
+    </div>
+
+  </div>
+
+  <div class="timeline-content-card" id="timeline-content">
+    <h3 id="timeline-year">2025｜五週年聲音慶典</h3>
+    <p id="timeline-desc">i聽聽五週年歡慶登場！全新吉祥物「聽丸」亮相，搭配「聽覺性格測驗」，帶你發現專屬於自己的五聲五色。</p>
+  </div>
+</section>
+
+
+  <!-- 四大活動區塊 -->
+	<section class="activities-section">
+	  <h2>五週年聲音慶典</h2>
+	  <p class="activities-subhead">聲音不只好聽，還能更好玩！</p>
+
+	<div class="activities-grid">
+
+	  <div class="activity-card" onclick="window.location.href='quiz.html'">
+		<img src="images/bn_quiz.jpg" alt="聽覺性格測驗">
+		<h3>聽覺性格測驗</h3>
+    <p>
+      你是歡樂派耳朵？還是生活派耳朵？<br>
+      用五感探索你的專屬聽覺個性，<br>
+      解鎖客製化推薦與專屬驚喜獎勵！
+    </p>
+	  </div>
+
+	  <div class="activity-card" onclick="window.location.href='mascot.html'">
+		<img src="images/bn_mascot.jpg" alt="IP吉祥物聽丸">
+		<h3>全新吉祥物「聽丸」</h3>
+    <p>
+      i聽聽全新代言人「聽丸」登場！<br>
+      可愛又有個性的他將陪你一起聆聽世界，<br>
+      馬上解鎖角色性格卡，一起成為聽丸夥伴！
+    </p>
+	  </div>
+
+	  <div class="activity-card" onclick="window.location.href='blessing.html'">
+		<img src="images/bn_blessing.jpg" alt="聲日祝福牆">
+		<h3>聲日祝福牆</h3>
+    <p>
+      演員、作家、主持人、設計師⋯<br>
+      跨界名人接力祝福中！<br>
+      也留下你的聲音留言，<br>
+      一起為i聽聽五週年寫下聲音祝福篇章。
+    </p>
+	  </div>
+
+	  <div class="activity-card" onclick="window.location.href='promo.html'">
+		<img src="images/bn_promo.jpg" alt="周年慶優惠活動">
+		<h3>週年限定優惠</h3>
+    <p>
+      五週年期間限定超值優惠來啦～<br>
+      訂閱享好禮，加碼抽驚喜大獎，<br>
+      喜歡聲音的你絕對不能錯過！
+    </p>
+	  </div>
+
+	</div>
+</section>
+
+  <!-- Footer -->
+<footer class="custom-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <a href="https://www.ilisten.tw/" target="_blank" aria-label="i聽聽"><img src="images/icon_ilisten.svg" alt="Logo" class="footer-logo" /></a>
+      <p class="footer-text">© i聽聽 All Rights Reserved</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.facebook.com/iListenAudio.tw/" target="_blank" aria-label="Facebook"><img src="images/icon_FB.svg" alt="FB" /></a>
+      <a href="https://www.instagram.com/ilisten.tw/" target="_blank" aria-label="Instagram"><img src="images/icon_IG.svg" alt="IG" /></a>
+      <a href="https://www.youtube.com/@iiListen149" target="_blank" aria-label="YouTube"><img src="images/icon_YT.svg" alt="YT" /></a>
+    </div>
+  </div>
+</footer>
+ <script src="js/script.js"></script>
+</body>
+</html>

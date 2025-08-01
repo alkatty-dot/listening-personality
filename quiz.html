@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO 基本資訊 -->
+  <title>找出你的聽覺性格｜i聽聽五週年聲音慶典</title>
+  <meta name="description" content="五感探索測驗，發現你的耳朵性格，立即解鎖專屬推薦與驚喜好禮！">
+  <meta name="keywords" content="i聽聽, 有聲書, 課程, Podcast, 生日快樂,  五週年, 活動, 優惠, 聽覺性格, 名人祝福">
+  <link rel="icon" type="image/svg+xml" href="images/icon_ilisten.svg">
+
+  <!-- Open Graph / 社群預覽 -->
+  <meta property="og:title" content="找出你的聽覺性格｜i聽聽五週年聲音慶典">
+  <meta property="og:description" content="五感探索測驗，發現你的耳朵性格，立即解鎖專屬推薦與驚喜好禮！">
+  <meta property="og:image" content="https://www.ilisten.tw/5th/images/og_quiz.jpg">
+  <meta property="og:url" content="https://www.ilisten.tw/5th/quiz.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- GA 追蹤碼 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7R6PD1NL0Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7R6PD1NL0Z');
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <!-- RWD 導覽列 -->
+<nav class="navbar">
+	<div class="navbar-container">
+		<div class="nav-logo">
+	  <img src="images/ilisten-logo.png" alt="i聽聽 Logo" class="logo-img">
+	  <span>五聲五色！ i聽聽五週年聲音慶典</span>
+	</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="quiz.html" class="active">聽覺性格測驗</a></li>
+      <li><a href="mascot.html">吉祥物-聽丸</a></li>
+      <li><a href="blessing.html">聲日祝福牆</a></li>
+      <li><a href="promo.html">優惠活動</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Banner -->
+<section class="banner-section">
+  <picture class="banner-picture">
+    <!-- 手機版 BN -->
+    <source media="(max-width: 768px)" srcset="images/Banner_quiz_phone.jpg">
+    <!-- 桌機版 BN -->
+    <img src="images/Banner_quiz_web.jpg" alt="聽覺性格測驗" class="banner-image">
+  </picture>
+</section>
+
+  <section class="quiz-section">
+    <div class="container">
+      <!-- 起始頁面 -->
+      <div id="startPage">
+        <h2 class="start-title">找出你的聽覺性格！</h2>
+        <div class="intro-img">
+          <img src="images/mascot.png" alt="聽丸圖片" />
+        </div>
+        <button id="startBtn">開始測驗</button>
+        <p class="intro-note">完成測驗有機會獲得 7 天無限聽方案 + 抽電子書閱讀器！</p>
+      </div>
+
+      <!-- 測驗題目區 -->
+      <div id="quiz"></div>
+
+      <!-- 結果區 -->
+      <div id="result">
+        <h2>你的耳朵性格是：</h2>
+        <div class="result-card" id="resultCard">
+          <div id="resultImageBox" class="result-image">
+            <img id="resultImage" src="" alt="結果圖卡">
+          </div>
+          <p id="resultDesc" class="result-desc"></p>
+          <div class="recommend-section" id="recommendSection"></div>
+          <div class="chart-container">
+            <canvas id="radarChart" width="500" height="500"></canvas>
+          </div>
+        </div>
+      <div class="action-buttons">
+        <button id="downloadBtn">下載結果圖片</button>
+        <button id="shareFB">分享到 Facebook</button>
+        <button id="shareLINE">分享到 LINE</button>
+        <button id="restartBtn">重新測驗</button>
+      </div>
+
+  <!-- 表單開始 -->
+  <form class="entry-form" id="resultForm" action="https://script.google.com/macros/s/AKfycbyGb9MoZ0MkkYD81MbmPsP9k-Q4h2bFz0afEDbHBM1GgCbCEfg6rnmyb8ds1mB18kSu8Q/exec" method="POST">
+  <h3>留下你的資料，領取 i聽聽7天體驗序號<br>並獲得「電子書閱讀器」抽獎機會</h3>
+  <p class="intro-note">（每組Email限領取一次序號）</p>
+    <div class="form-group">
+      <label for="name">姓名：</label>
+      <input type="text" name="name" id="name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email：</label>
+      <input type="email" name="email" id="email" class="form-control" required>
+    </div>
+    <button type="submit">送出資料並領取序號</button>
+  </form>
+</div>
+</section>
+
+  <!-- Footer -->
+<footer class="custom-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <a href="https://www.ilisten.tw/" target="_blank" aria-label="i聽聽"><img src="images/icon_ilisten.svg" alt="Logo" class="footer-logo" /></a>
+      <p class="footer-text">© i聽聽 All Rights Reserved</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.facebook.com/iListenAudio.tw/" target="_blank" aria-label="Facebook"><img src="images/icon_FB.svg" alt="FB" /></a>
+      <a href="https://www.instagram.com/ilisten.tw/" target="_blank" aria-label="Instagram"><img src="images/icon_IG.svg" alt="IG" /></a>
+      <a href="https://www.youtube.com/@iiListen149" target="_blank" aria-label="YouTube"><img src="images/icon_YT.svg" alt="YT" /></a>
+    </div>
+  </div>
+</footer>
+ <script src="js/script.js"></script>
+</body>
+</html>
