@@ -526,21 +526,69 @@ if (mascotPage) {
   };
 }
 
-document.querySelectorAll('.custom-audio-player').forEach(player => {
-  const audio = new Audio(player.dataset.audio);
-  const playBtn = player.querySelector('.play-btn');
 
-  playBtn.addEventListener('click', () => {
+
+// 動態縮小字體
+document.querySelectorAll('.celebrity-title').forEach(title => {
+  const containerWidth = title.parentElement.offsetWidth;
+  let fontSize = 16;
+
+  title.style.fontSize = fontSize + 'px';
+
+  while (title.scrollWidth > containerWidth && fontSize > 10) {
+    fontSize -= 1;
+    title.style.fontSize = fontSize + 'px';
+  }
+});
+
+let currentAudio = null;
+let currentPlayBtn = null;
+
+function revealCard(card) {
+  const img = card.querySelector('.celebrity-photo');
+  const extra = card.querySelector('.extra-info');
+  const player = card.querySelector('.custom-audio-player');
+  const playBtn = player.querySelector('.play-btn');
+  const audioSrc = player.dataset.audio;
+
+  // 若卡片已解鎖，不再執行顯示邏輯
+  if (!img.classList.contains('blurred')) return;
+
+  img.classList.remove('blurred');
+  extra.classList.remove('hidden');
+  player.classList.remove('hidden');
+
+  handleAudio(audioSrc, playBtn);
+}
+
+function handleAudio(audioSrc, playBtn) {
+  // 停止目前音檔
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    if (currentPlayBtn) currentPlayBtn.textContent = '▶';
+  }
+
+  // 播放新音檔
+  const audio = new Audio(audioSrc);
+  currentAudio = audio;
+  currentPlayBtn = playBtn;
+
+  audio.play();
+  playBtn.textContent = '❚❚';
+
+  audio.addEventListener('ended', () => {
+    playBtn.textContent = '▶';
+  });
+
+  playBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
     if (audio.paused) {
-      audio.play();
-      playBtn.textContent = '❚❚'; // 播放中顯示暫停符號
+      handleAudio(audioSrc, playBtn); // 重新播放
     } else {
       audio.pause();
       playBtn.textContent = '▶';
     }
   });
-
-  audio.addEventListener('ended', () => {
-    playBtn.textContent = '▶';
-  });
-});
+}
