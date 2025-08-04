@@ -1153,6 +1153,14 @@ canvas#radarChart {
   background: rgba(94, 231, 223, 0.9);
 }
 
+@media (max-width: 480px) {
+  .celebrity-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    padding: 0 6px;
+  }
+}
+
 /* ===== 使用者祝福上傳區 ===== */
 .text-blessing {
   text-align: center;
