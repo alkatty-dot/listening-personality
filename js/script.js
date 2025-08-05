@@ -421,33 +421,67 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  document.getElementById("shareImageBtn")?.addEventListener("click", async () => {
+document.getElementById("shareImageBtn")?.addEventListener("click", async () => {
   const resultCard = document.getElementById("resultCard");
-  if (!navigator.canShare || !navigator.canShare({ files: [] })) {
-    alert("您的瀏覽器不支援圖片分享，請使用手機瀏覽器再試一次！");
-    return;
-  }
 
   try {
     const canvas = await html2canvas(resultCard, {
       useCORS: true,
-      allowTaint: false,
       backgroundColor: "#ffffff",
       scale: 2
     });
 
     const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
-    const file = new File([blob], "ear-personality.png", { type: "image/png" });
+    if (!blob) {
+      alert("無法產生圖片");
+      return;
+    }
 
-    await navigator.share({
-      title: "耳朵性格測驗結果",
-      text: "看看我的耳朵性格是什麼 👉",
-      files: [file]
-    });
+    const file = new File([blob], "result.png", { type: "image/png" });
+
+    console.log("navigator.share supported:", !!navigator.share);
+    console.log("canShare with file:", navigator.canShare?.({ files: [file] }));
+    console.log("userAgent:", navigator.userAgent);
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        title: "我的耳朵性格測驗結果",
+        text: "來看看你是哪一型耳朵吧 👉",
+        files: [file]
+      });
+    } else {
+      // 不支援分享圖片，顯示預覽圖片與手動分享提示
+      const imageURL = URL.createObjectURL(blob);
+
+      // 移除舊的預覽（如果有）
+      const existingPreview = document.getElementById("imagePreview");
+      if (existingPreview) existingPreview.remove();
+
+      // 建立新的預覽圖片
+      const img = document.createElement("img");
+      img.id = "imagePreview";
+      img.src = imageURL;
+      img.style.width = "100%";
+      img.style.maxWidth = "500px";
+      img.style.marginTop = "20px";
+      img.style.border = "1px solid #ccc";
+      img.style.borderRadius = "8px";
+
+      const tip = document.createElement("p");
+      tip.textContent = "長按圖片即可儲存並分享到 IG、LINE 或 Facebook";
+      tip.style.color = "#333";
+      tip.style.fontSize = "14px";
+      tip.style.marginTop = "10px";
+
+      const container = document.getElementById("result");
+      container.appendChild(img);
+      container.appendChild(tip);
+    }
   } catch (error) {
-    alert("分享失敗，請確認瀏覽器支援此功能");
+    alert("分享失敗，請改用儲存圖片方式");
     console.error("分享錯誤：", error);
   }
+
 });
 
   document.getElementById("shareFB")?.addEventListener("click", () => {
