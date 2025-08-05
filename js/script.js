@@ -421,6 +421,34 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.getElementById("shareImageBtn")?.addEventListener("click", async () => {
+  const resultCard = document.getElementById("resultCard");
+  if (!navigator.canShare || !navigator.canShare({ files: [] })) {
+    alert("您的瀏覽器不支援圖片分享，請使用手機瀏覽器再試一次！");
+    return;
+  }
+
+  try {
+    const canvas = await html2canvas(resultCard, {
+      useCORS: true,
+      allowTaint: false,
+      backgroundColor: "#ffffff",
+      scale: 2
+    });
+
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
+    const file = new File([blob], "ear-personality.png", { type: "image/png" });
+
+    await navigator.share({
+      title: "耳朵性格測驗結果",
+      text: "看看我的耳朵性格是什麼 👉",
+      files: [file]
+    });
+  } catch (error) {
+    alert("分享失敗，請確認瀏覽器支援此功能");
+    console.error("分享錯誤：", error);
+  }
+});
 
   document.getElementById("shareFB")?.addEventListener("click", () => {
     const shareURL = encodeURIComponent(window.location.href);
