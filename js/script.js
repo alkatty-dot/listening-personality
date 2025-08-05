@@ -423,7 +423,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("shareImageBtn")?.addEventListener("click", async () => {
   const resultCard = document.getElementById("resultCard");
-  const shareUrl = "https://alkatty-dot.github.io/listening-personality/quiz.html";
+  const shareUrl = "https://ilisten.tw/5th//quiz.html";
+  const resultType = document.getElementById("resultType")?.textContent || "未知類型";
+  const shareText = `我的耳朵性格是「${resultType}」，來看看你是哪一型耳朵吧 👉`;
 
   try {
     const canvas = await html2canvas(resultCard, {
@@ -442,12 +444,12 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
 
     // ✅ 嘗試使用 Web Share API 分享圖片＋網址
     if (navigator.canShare && navigator.canShare({ files: [file], url: shareUrl })) {
-      await navigator.share({
-        title: "我的耳朵性格測驗結果",
-        text: "來看看你是哪一型耳朵吧 👉",
-        url: shareUrl,
-        files: [file]
-      });
+        await navigator.share({
+          title: "我的耳朵性格測驗結果",
+          text: shareText,
+          url: shareUrl,
+          files: [file]
+        });
       return;
     }
 
