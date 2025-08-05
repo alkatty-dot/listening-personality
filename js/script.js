@@ -110,121 +110,121 @@ if (nodes && yearEl && descEl) {
   "偵探型": {
     desc: "你是懸疑感滿滿的偵探型耳朵！你的耳朵像雷達，專門捕捉轉折和伏筆，跟聽丸一樣，愛找線索到停不下來！",
     recommend: [
-      { title: "13‧67", img: "images/cover/1-1.jpg", link: "#" },
-      { title: "請把門鎖好", img: "images/cover/1-2.jpg", link: "#" },
-      { title: "笭菁禁忌系列有聲劇", img: "images/cover/1-3.jpg", link: "#" },
-      { title: "妖怪藥局", img: "images/cover/1-4.jpg", link: "#" },
-      { title: "佐伙來聽囡仔古", img: "images/cover/1-5.jpg", link: "#" },
-      { title: "巫者", img: "images/cover/1-6.jpg", link: "#" },
-      { title: "妖怪臺灣地圖", img: "images/cover/1-7.jpg", link: "#" },
-      { title: "西遊記", img: "images/cover/1-8.jpg", link: "#" },
-      { title: "乩童醫生", img: "images/cover/1-9.jpg", link: "#" },
-      { title: "杏花渡傳說", img: "images/cover/1-10.jpg", link: "#" }
+      { title: "13‧67", img: "images/cover/1-1.jpg", link: "https://ilisten.page.link/U6Ly" },
+      { title: "請把門鎖好", img: "images/cover/1-2.jpg", link: "https://ilisten.page.link/rxLB" },
+      { title: "笭菁禁忌系列有聲劇", img: "images/cover/1-3.jpg", link: "https://ilisten.page.link/rxLB" },
+      { title: "妖怪藥局", img: "images/cover/1-4.jpg", link: "https://ilisten.page.link/XYdu" },
+      { title: "佐伙來聽囡仔古", img: "images/cover/1-5.jpg", link: "https://ilisten.page.link/65Ux" },
+      { title: "巫者", img: "images/cover/1-6.jpg", link: "https://ilisten.page.link/zF5S" },
+      { title: "妖怪臺灣地圖", img: "images/cover/1-7.jpg", link: "https://ilisten.page.link/WZZQ" },
+      { title: "西遊記", img: "images/cover/1-8.jpg", link: "https://ilisten.page.link/kQ8G" },
+      { title: "乩童醫生", img: "images/cover/1-9.jpg", link: "https://ilisten.page.link/siVc" },
+      { title: "杏花渡傳說", img: "images/cover/1-10.jpg", link: "https://ilisten.page.link/8eSX" }
     ]
   },
   "歡樂派": {
     desc: "你是陽光開朗的歡樂派耳朵！總能從聲音中捕捉快樂能量，讓自己和別人都開心！",
     recommend: [
-      { title: "笑感動天", img: "images/cover/2-1.jpg", link: "#" },
-      { title: "一代風流-笑聲滿人間", img: "images/cover/2-2.jpg", link: "#" },
-      { title: "秋.逗", img: "images/cover/2-3.jpg", link: "#" },
-      { title: "笑神來了", img: "images/cover/2-4.jpg", link: "#" },
-      { title: "我不要演癩蛤蟆", img: "images/cover/2-5.jpg", link: "#" },
-      { title: "三十三", img: "images/cover/2-6.jpg", link: "#" },
-      { title: "快書竹板林文彬", img: "images/cover/2-7.jpg", link: "#" },
-      { title: "藝曲趣教遊之對口相聲", img: "images/cover/2-8.jpg", link: "#" },
-      { title: "京聲賤笑（上）", img: "images/cover/2-9.jpg", link: "#" },
-      { title: "吳間道", img: "images/cover/2-10.jpg", link: "#" }
+      { title: "笑感動天", img: "images/cover/2-1.jpg", link: "https://ilisten.page.link/B2oU" },
+      { title: "一代風流-笑聲滿人間", img: "images/cover/2-2.jpg", link: "https://ilisten.page.link/ng4J" },
+      { title: "秋.逗", img: "images/cover/2-3.jpg", link: "https://ilisten.page.link/Aapk" },
+      { title: "笑神來了", img: "images/cover/2-4.jpg", link: "https://ilisten.page.link/fVCs" },
+      { title: "我不要演癩蛤蟆", img: "images/cover/2-5.jpg", link: "https://ilisten.page.link/MTeK" },
+      { title: "三十三", img: "images/cover/2-6.jpg", link: "https://ilisten.page.link/RzMb" },
+      { title: "快書竹板林文彬", img: "images/cover/2-7.jpg", link: "https://ilisten.page.link/Nnqt" },
+      { title: "藝曲趣教遊之對口相聲", img: "images/cover/2-8.jpg", link: "https://ilisten.page.link/7qrX" },
+      { title: "京聲賤笑（上）", img: "images/cover/2-9.jpg", link: "https://ilisten.page.link/9D6X" },
+      { title: "吳間道", img: "images/cover/2-10.jpg", link: "https://ilisten.page.link/5MeG" }
     ]
   },
   "貓系": {
     desc: "你是療癒系的貓系耳朵！喜歡安靜柔和的聲音，讓自己放鬆下來。",
     recommend: [
-      { title: "腦內鋼琴", img: "images/cover/3-1.jpg", link: "#" },
-      { title: "所有溫柔都是你的隱喻", img: "images/cover/3-2.jpg", link: "#" },
-      { title: "剛剛好的優雅", img: "images/cover/3-3.jpg", link: "#" },
-      { title: "白噪音深層睡眠", img: "images/cover/3-4.jpg", link: "#" },
-      { title: "夢的翅膀.翱翔於古典的夢", img: "images/cover/3-5.jpg", link: "#" },
-      { title: "給台灣的情書", img: "images/cover/3-6.jpg", link: "#" },
-      { title: "心靈療癒Piano．寧靜森林", img: "images/cover/3-7.jpg", link: "#" },
-      { title: "阿得姊姊說蘭格童話", img: "images/cover/3-8.jpg", link: "#" },
-      { title: "銀河鐵道之夜", img: "images/cover/3-9.jpg", link: "#" },
-      { title: "穿越撒哈拉", img: "images/cover/3-10.jpg", link: "#" }
+      { title: "腦內鋼琴", img: "images/cover/3-1.jpg", link: "https://ilisten.page.link/tGR7" },
+      { title: "所有溫柔都是你的隱喻", img: "images/cover/3-2.jpg", link: "https://ilisten.page.link/qakS" },
+      { title: "剛剛好的優雅", img: "images/cover/3-3.jpg", link: "https://ilisten.page.link/Wx6T" },
+      { title: "白噪音深層睡眠", img: "images/cover/3-4.jpg", link: "https://ilisten.page.link/cRqF" },
+      { title: "夢的翅膀.翱翔於古典的夢", img: "images/cover/3-5.jpg", link: "https://ilisten.page.link/GrfK" },
+      { title: "給台灣的情書", img: "images/cover/3-6.jpg", link: "https://ilisten.page.link/jRpx" },
+      { title: "心靈療癒Piano．寧靜森林", img: "images/cover/3-7.jpg", link: "https://ilisten.page.link/vS3P" },
+      { title: "阿得姊姊說蘭格童話", img: "images/cover/3-8.jpg", link: "https://ilisten.page.link/L6su" },
+      { title: "銀河鐵道之夜", img: "images/cover/3-9.jpg", link: "https://ilisten.page.link/NPzy" },
+      { title: "穿越撒哈拉", img: "images/cover/3-10.jpg", link: "https://ilisten.page.link/CCFG" }
     ]
   },
   "調頻型": {
     desc: "你是冷靜沉穩的調頻型耳朵！總能用聲音找到情緒的平衡點。",
     recommend: [
-      { title: "靜心．淨心", img: "images/cover/4-1.jpg", link: "#" },
-      { title: "我的簡單生活練習", img: "images/cover/4-2.jpg", link: "#" },
-      { title: "莫札特靜心鋼琴曲", img: "images/cover/4-3.jpg", link: "#" },
-      { title: "ASMR西藏頌缽", img: "images/cover/4-4.jpg", link: "#" },
-      { title: "絲國蘭鋼琴系列", img: "images/cover/4-5.jpg", link: "#" },
-      { title: "ASMR空靈頌缽", img: "images/cover/4-6.jpg", link: "#" },
-      { title: "上班族的香氛療癒課", img: "images/cover/4-7.jpg", link: "#" },
-      { title: "曾宇謙小提琴專輯", img: "images/cover/4-8.jpg", link: "#" },
-      { title: "抗癌自癒力：正念減壓8堂課", img: "images/cover/4-9.jpg", link: "#" },
-      { title: "鋼琴森林詩篇ASMR樂章", img: "images/cover/4-10.jpg", link: "#" }
+      { title: "靜心．淨心", img: "images/cover/4-1.jpg", link: "https://ilisten.page.link/a3xR" },
+      { title: "我的簡單生活練習", img: "images/cover/4-2.jpg", link: "https://ilisten.page.link/xQEa" },
+      { title: "莫札特靜心鋼琴曲", img: "images/cover/4-3.jpg", link: "https://ilisten.page.link/wLP6" },
+      { title: "ASMR西藏頌缽", img: "images/cover/4-4.jpg", link: "https://ilisten.page.link/C1jY" },
+      { title: "絲國蘭鋼琴系列", img: "images/cover/4-5.jpg", link: "https://ilisten.page.link/s4qu" },
+      { title: "ASMR空靈頌缽", img: "images/cover/4-6.jpg", link: "https://ilisten.page.link/YZok" },
+      { title: "上班族的香氛療癒課", img: "images/cover/4-7.jpg", link: "https://ilisten.page.link/3oQa" },
+      { title: "曾宇謙小提琴專輯", img: "images/cover/4-8.jpg", link: "https://ilisten.page.link/Yeq3" },
+      { title: "抗癌自癒力：正念減壓8堂課", img: "images/cover/4-9.jpg", link: "https://ilisten.page.link/o687" },
+      { title: "鋼琴森林詩篇ASMR樂章", img: "images/cover/4-10.jpg", link: "https://ilisten.page.link/o687" }
     ]
   },
   "學霸型": {
     desc: "你是知識型的學霸耳朵！喜歡在聲音中學習新知識。",
     recommend: [
-      { title: "徐薇英文系列", img: "images/cover/5-1.jpg", link: "#" },
-      { title: "世界是怎麼長成現在的樣子？", img: "images/cover/5-2.jpg", link: "#" },
-      { title: "台灣風土系列", img: "images/cover/5-3.jpg", link: "#" },
-      { title: "今天好想藥", img: "images/cover/5-4.jpg", link: "#" },
-      { title: "劉亮佐有藝思", img: "images/cover/5-5.jpg", link: "#" },
-      { title: "徐佳馨房產學院", img: "images/cover/5-6.jpg", link: "#" },
-      { title: "趙小僑的塔羅筆記", img: "images/cover/5-7.jpg", link: "#" },
-      { title: "江大成電商創業筆記", img: "images/cover/5-8.jpg", link: "#" },
-      { title: "打造動人表達力的15堂課", img: "images/cover/5-9.jpg", link: "#" },
-      { title: "超級房仲成交的12堂課", img: "images/cover/5-10.jpg", link: "#" }
+      { title: "徐薇英文系列", img: "images/cover/5-1.jpg", link: "https://ilisten.page.link/zwcx" },
+      { title: "世界是怎麼長成現在的樣子？", img: "images/cover/5-2.jpg", link: "https://ilisten.page.link/RWN8" },
+      { title: "台灣風土系列", img: "images/cover/5-3.jpg", link: "https://ilisten.page.link/kJb1" },
+      { title: "今天好想藥", img: "images/cover/5-4.jpg", link: "https://ilisten.page.link/g9j5" },
+      { title: "劉亮佐有藝思", img: "images/cover/5-5.jpg", link: "https://ilisten.page.link/xeKz" },
+      { title: "徐佳馨房產學院", img: "images/cover/5-6.jpg", link: "https://ilisten.page.link/EqtC" },
+      { title: "趙小僑的塔羅筆記", img: "images/cover/5-7.jpg", link: "https://ilisten.page.link/99jN" },
+      { title: "江大成電商創業筆記", img: "images/cover/5-8.jpg", link: "https://ilisten.page.link/EHgr" },
+      { title: "打造動人表達力的15堂課", img: "images/cover/5-9.jpg", link: "https://ilisten.page.link/DDTP#" },
+      { title: "超級房仲成交的12堂課", img: "images/cover/5-10.jpg", link: "https://ilisten.page.link/UB7U#" }
     ]
   },
   "哲學系": {
     desc: "你是深思熟慮的哲學系耳朵！喜歡用聲音探索人生。",
     recommend: [
-      { title: "三毛典藏系列有聲書", img: "images/cover/6-1.jpg", link: "#" },
-      { title: "劉梓潔列有聲書", img: "images/cover/6-2.jpg", link: "#" },
-      { title: "張愛玲系列有聲書", img: "images/cover/6-3.jpg", link: "#" },
-      { title: "小王子", img: "images/cover/6-4.jpg", link: "#" },
-      { title: "麻醉醫師靈魂所在的地方", img: "images/cover/6-5.jpg", link: "#" },
-      { title: "妮說BOOK，我說可", img: "images/cover/6-6.jpg", link: "#" },
-      { title: "慢讀金剛經", img: "images/cover/6-7.jpg", link: "#" },
-      { title: "自卑與超越", img: "images/cover/6-8.jpg", link: "#" },
-      { title: "巴奈回家：凱道", img: "images/cover/6-9.jpg", link: "#" },
-      { title: "許皓宜56則情緒陰影", img: "images/cover/6-10.jpg", link: "#" }
+      { title: "三毛典藏系列有聲書", img: "images/cover/6-1.jpg", link: "https://ilisten.page.link/6Bvd" },
+      { title: "劉梓潔列有聲書", img: "images/cover/6-2.jpg", link: "https://ilisten.page.link/q1Q4" },
+      { title: "張愛玲系列有聲書", img: "images/cover/6-3.jpg", link: "https://ilisten.page.link/RJqd" },
+      { title: "小王子", img: "images/cover/6-4.jpg", link: "https://ilisten.page.link/ucZV" },
+      { title: "麻醉醫師靈魂所在的地方", img: "images/cover/6-5.jpg", link: "https://ilisten.page.link/xoTZ" },
+      { title: "妮說BOOK，我說可", img: "images/cover/6-6.jpg", link: "https://ilisten.page.link/EsWc" },
+      { title: "慢讀金剛經", img: "images/cover/6-7.jpg", link: "https://ilisten.page.link/EJji" },
+      { title: "自卑與超越", img: "images/cover/6-8.jpg", link: "https://ilisten.page.link/urdJ" },
+      { title: "巴奈回家：凱道", img: "images/cover/6-9.jpg", link: "https://ilisten.page.link/8a82" },
+      { title: "許皓宜56則情緒陰影", img: "images/cover/6-10.jpg", link: "https://ilisten.page.link/NT6m" }
     ]
   },
   "生活派": {
     desc: "你是隨和輕鬆的生活派耳朵！喜歡日常的溫度與親切的陪伴感。",
     recommend: [
-      { title: "趙小僑很有事", img: "images/cover/7-1.jpg", link: "#" },
-      { title: "12星座想怎樣", img: "images/cover/7-2.jpg", link: "#" },
-      { title: "快速入門！臺灣人不可忽視的百大病症", img: "images/cover/7-3.jpg", link: "#" },
-      { title: "用耳朵看展覽", img: "images/cover/7-4.jpg", link: "#" },
-      { title: "黃惠如-慢老的10堂課", img: "images/cover/7-5.jpg", link: "#" },
-      { title: "餃子與味噌：流動的日本味", img: "images/cover/7-6.jpg", link: "#" },
-      { title: "10分鐘早報新聞", img: "images/cover/7-7.jpg", link: "#" },
-      { title: "東京歷史迷走", img: "images/cover/7-8.jpg", link: "#" },
-      { title: "杜丞蕓—24節氣養生：飲食、經絡保健", img: "images/cover/7-9.jpg", link: "#" },
-      { title: "Oh My God！我的天公伯啊～", img: "images/cover/7-10.jpg", link: "#" }
+      { title: "趙小僑很有事", img: "images/cover/7-1.jpg", link: "https://ilisten.page.link/HbYf" },
+      { title: "12星座想怎樣", img: "images/cover/7-2.jpg", link: "https://ilisten.page.link/kxjB" },
+      { title: "快速入門！臺灣人不可忽視的百大病症", img: "images/cover/7-3.jpg", link: "https://ilisten.page.link/RpJG" },
+      { title: "用耳朵看展覽", img: "images/cover/7-4.jpg", link: "https://ilisten.page.link/RpJG" },
+      { title: "黃惠如-慢老的10堂課", img: "images/cover/7-5.jpg", link: "https://ilisten.page.link/J4xE" },
+      { title: "餃子與味噌：流動的日本味", img: "images/cover/7-6.jpg", link: "https://ilisten.page.link/eVkF" },
+      { title: "東京歷史迷走", img: "images/cover/7-7.jpg", link: "https://ilisten.page.link/nk15" },
+      { title: "10分鐘早報新聞", img: "images/cover/7-8.jpg", link: "https://ilisten.page.link/YxrY" },
+      { title: "杜丞蕓—24節氣養生：飲食、經絡保健", img: "images/cover/7-9.jpg", link: "https://ilisten.page.link/SWiP" },
+      { title: "Oh My God！我的天公伯啊～", img: "images/cover/7-10.jpg", link: "https://ilisten.page.link/eced" }
     ]
   },
   "陪伴型": {
     desc: "你是溫暖貼心的陪伴型耳朵！喜歡聲音給你溫度與陪伴。",
     recommend: [
-      { title: "花甲男孩（有聲劇）", img: "images/cover/8-1.jpg", link: "#" },
-      { title: "黑潔明-小肥肥的猛男日記", img: "images/cover/8-2.jpg", link: "#" },
-      { title: "母語：為阿嬤做傻事", img: "images/cover/8-3.jpg", link: "#" },
-      { title: "尼奧媽的單身派對", img: "images/cover/8-4.jpg", link: "#" },
-      { title: "內向力", img: "images/cover/8-5.jpg", link: "#" },
-      { title: "宮西達也霸王龍系列有聲書", img: "images/cover/8-6.jpg", link: "#" },
-      { title: "廚房裡的偽魚販", img: "images/cover/8-7.jpg", link: "#" },
-      { title: "我不要完美，只要完整", img: "images/cover/8-8.jpg", link: "#" },
-      { title: "盧俊義牧師講箴言", img: "images/cover/8-9.jpg", link: "#" },
-      { title: "人生有所謂，決斷無所畏", img: "images/cover/8-10.jpg", link: "#" }
+      { title: "花甲男孩（有聲劇）", img: "images/cover/8-1.jpg", link: "https://ilisten.page.link/wRRp" },
+      { title: "黑潔明-小肥肥的猛男日記", img: "images/cover/8-2.jpg", link: "https://ilisten.page.link/BQ3R" },
+      { title: "母語：為阿嬤做傻事", img: "images/cover/8-3.jpg", link: "https://ilisten.page.link/2V9E" },
+      { title: "尼奧媽的單身派對", img: "images/cover/8-4.jpg", link: "https://ilisten.page.link/dfxA" },
+      { title: "內向力", img: "images/cover/8-5.jpg", link: "https://ilisten.page.link/Xa6u" },
+      { title: "宮西達也霸王龍系列有聲書", img: "images/cover/8-6.jpg", link: "https://ilisten.page.link/PPj1" },
+      { title: "廚房裡的偽魚販", img: "images/cover/8-7.jpg", link: "https://ilisten.page.link/T3hz" },
+      { title: "我不要完美，只要完整", img: "images/cover/8-8.jpg", link: "https://ilisten.page.link/VAyU" },
+      { title: "盧俊義牧師講箴言", img: "images/cover/8-9.jpg", link: "https://ilisten.page.link/25du" },
+      { title: "人生有所謂，決斷無所畏", img: "images/cover/8-10.jpg", link: "https://ilisten.page.link/9unE" }
     ]
   }
 };
@@ -688,8 +688,6 @@ if (mascotPage) {
 }
 
 
-
-
 // 動態縮小字體
 document.querySelectorAll('.celebrity-title').forEach(title => {
   const containerWidth = title.parentElement.offsetWidth;
@@ -707,31 +705,31 @@ let currentAudio = null;
 let currentPlayBtn = null;
 
 function revealCard(card) {
-  const img = card.querySelector('.celebrity-photo');
+  // 防止重複打開
+  if (card.classList.contains('revealed')) return;
+
+  card.classList.add('revealed');
+
+  const img = card.querySelector('.real-photo');
   const extra = card.querySelector('.extra-info');
   const player = card.querySelector('.custom-audio-player');
   const playBtn = player.querySelector('.play-btn');
   const audioSrc = player.dataset.audio;
 
-  // 若卡片已解鎖，不再執行顯示邏輯
-  if (!img.classList.contains('blurred')) return;
+  if (extra) extra.classList.remove('hidden');
+  if (player) player.classList.remove('hidden');
 
-  img.classList.remove('blurred');
-  extra.classList.remove('hidden');
-  player.classList.remove('hidden');
-
+  // 處理音檔播放
   handleAudio(audioSrc, playBtn);
 }
 
 function handleAudio(audioSrc, playBtn) {
-  // 停止目前音檔
   if (currentAudio && !currentAudio.paused) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
     if (currentPlayBtn) currentPlayBtn.textContent = '▶';
   }
 
-  // 播放新音檔
   const audio = new Audio(audioSrc);
   currentAudio = audio;
   currentPlayBtn = playBtn;
@@ -745,12 +743,12 @@ function handleAudio(audioSrc, playBtn) {
 
   playBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-
     if (audio.paused) {
-      handleAudio(audioSrc, playBtn); // 重新播放
+      handleAudio(audioSrc, playBtn);
     } else {
       audio.pause();
       playBtn.textContent = '▶';
     }
   });
 }
+
