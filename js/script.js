@@ -235,6 +235,7 @@ if (nodes && yearEl && descEl) {
     "學霸型": 0, "哲學系": 0, "生活派": 0, "陪伴型": 0
   };
   let radarChart;
+  let finalResultType = "";
 
   const quizContainer = document.getElementById("quiz");
   const resultContainer = document.getElementById("result");
@@ -288,6 +289,7 @@ if (nodes && yearEl && descEl) {
     const maxScore = Math.max(...Object.values(scores));
     const topTypes = Object.keys(scores).filter(key => scores[key] === maxScore);
     const resultTypeName = topTypes[0];
+    finalResultType = resultTypeName;
 
     resultDesc.innerText = resultData[resultTypeName].desc;
 
@@ -424,7 +426,7 @@ window.addEventListener("DOMContentLoaded", () => {
 document.getElementById("shareImageBtn")?.addEventListener("click", async () => {
   const resultCard = document.getElementById("resultCard");
   const shareUrl = "https://ilisten.tw/5th//quiz.html";
-  const resultType = document.getElementById("resultType")?.textContent || "未知類型";
+  const resultType = finalResultType || "未知類型";
   const shareText = `我的耳朵性格是「${resultType}」，來看看你是哪一型耳朵吧 👉`;
 
   try {
