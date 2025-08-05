@@ -589,7 +589,7 @@ if (mascotPage) {
     }
 
     const shareText = "我最喜歡這張聽丸圖卡，來看看你喜歡哪一張 👉";
-    const shareUrl = "https://alkatty-dot.github.io/listening-personality/mascot.html";
+    const shareUrl = "https://ilisten.tw/5th/mascot.html";
 
     try {
       const response = await fetch(selectedCard);
