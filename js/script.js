@@ -395,34 +395,6 @@ if (nodes && yearEl && descEl) {
     document.getElementById("startPage").style.display = "block";
   });
 
-window.addEventListener("DOMContentLoaded", () => {
-  const downloadBtn = document.getElementById("downloadBtn");
-  const resultCard = document.getElementById("resultCard");
-
-  if (downloadBtn && resultCard) {
-    downloadBtn.addEventListener("click", () => {
-      html2canvas(resultCard, {
-        useCORS: true,
-        allowTaint: false,
-        backgroundColor: null,
-        scale: 2
-      }).then(canvas => {
-        try {
-          const link = document.createElement('a');
-          link.download = 'result.png';
-          link.href = canvas.toDataURL("image/png");
-          link.click();
-        } catch (e) {
-          alert("無法下載圖片，請確認圖片來源是否為跨網域！");
-          console.error(e);
-        }
-      }).catch(err => {
-        alert("產生圖片時發生錯誤");
-        console.error("html2canvas 錯誤：", err);
-      });
-    });
-  }
-
 document.getElementById("shareImageBtn")?.addEventListener("click", async () => {
   const resultCard = document.getElementById("resultCard");
   const shareUrl = "https://ilisten.tw/5th//quiz.html";
@@ -443,19 +415,30 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
     }
 
     const file = new File([blob], "result.png", { type: "image/png" });
+    const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+    const canUseWebShare = navigator.canShare && navigator.canShare({ files: [file], url: shareUrl });
 
-    // ✅ 嘗試使用 Web Share API 分享圖片＋網址
-    if (navigator.canShare && navigator.canShare({ files: [file], url: shareUrl })) {
-        await navigator.share({
-          title: "我的耳朵性格測驗結果",
-          text: shareText,
-          url: shareUrl,
-          files: [file]
-        });
+    // ✅ 1. Web Share（行動裝置支援）
+    if (isMobile && canUseWebShare) {
+      await navigator.share({
+        title: "我的耳朵性格測驗結果",
+        text: shareText,
+        url: shareUrl,
+        files: [file]
+      });
       return;
     }
 
-    // ❌ 不支援 navigator.share（例如 LINE 內建瀏覽器）→ fallback 模式
+    // ✅ 2. 桌機環境 → 下載圖片
+    if (!isMobile) {
+      const link = document.createElement("a");
+      link.download = 'result.png';
+      link.href = URL.createObjectURL(blob);
+      link.click();
+      return;
+    }
+
+    // ✅ 3. Fallback（LINE、FB 內建瀏覽器等）→ 顯示圖片與網址
     const imageURL = URL.createObjectURL(blob);
 
     // 移除舊的預覽與按鈕（避免重複）
@@ -522,6 +505,7 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
   }
 });
 
+
   document.getElementById("shareFB")?.addEventListener("click", () => {
     const shareURL = encodeURIComponent(window.location.href);
     window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL, '_blank');
@@ -587,7 +571,6 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
     nameInput.disabled = false;
     emailInput.disabled = false;
   });
-});
 });
 
 
