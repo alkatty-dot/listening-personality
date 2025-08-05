@@ -416,10 +416,10 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
 
     const file = new File([blob], "result.png", { type: "image/png" });
     const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
-    const canUseWebShare = navigator.canShare && navigator.canShare({ files: [file], url: shareUrl });
+    const canUseWebShare = navigator.canShare?.({ files: [file], url: shareUrl });
 
-    // ✅ 1. Web Share（行動裝置支援）
-    if (isMobile && canUseWebShare) {
+    // ✅ 1. Web Share API 支援時（行動裝置）
+    if (navigator.share && canUseWebShare) {
       await navigator.share({
         title: "我的耳朵性格測驗結果",
         text: shareText,
@@ -429,19 +429,22 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
       return;
     }
 
-    // ✅ 2. 桌機環境 → 下載圖片
-    if (!isMobile) {
-      const link = document.createElement("a");
-      link.download = 'result.png';
-      link.href = URL.createObjectURL(blob);
-      link.click();
+    // ✅ 2. 桌機瀏覽器：自動下載圖片
+    const isDesktop = !isMobile;
+    if (isDesktop) {
+      const downloadLink = document.createElement("a");
+      downloadLink.href = URL.createObjectURL(blob);
+      downloadLink.download = "result.png";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
       return;
     }
 
-    // ✅ 3. Fallback（LINE、FB 內建瀏覽器等）→ 顯示圖片與網址
+    // ✅ 3. fallback：手機不支援 Web Share（如 LINE/FB 內建瀏覽器）
     const imageURL = URL.createObjectURL(blob);
 
-    // 移除舊的預覽與按鈕（避免重複）
+    // 清除舊的 fallback 預覽與按鈕
     document.getElementById("imagePreview")?.remove();
     document.getElementById("manualTip")?.remove();
     document.getElementById("copyBtn")?.remove();
@@ -506,16 +509,6 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
 });
 
 
-  document.getElementById("shareFB")?.addEventListener("click", () => {
-    const shareURL = encodeURIComponent(window.location.href);
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL, '_blank');
-  });
-
-  document.getElementById("shareLINE")?.addEventListener("click", () => {
-    const shareURL = encodeURIComponent(window.location.href);
-    window.open('https://social-plugins.line.me/lineit/share?url=' + shareURL, '_blank');
-  });
-});
 
   const resultForm = document.getElementById("resultForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -571,6 +564,7 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
     nameInput.disabled = false;
     emailInput.disabled = false;
   });
+});
 });
 
 
