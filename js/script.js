@@ -582,26 +582,111 @@ if (mascotPage) {
     });
   });
 
-  document.getElementById('shareFB').onclick = () => {
-    if (!selectedCard) return alert("請先選擇一張聽丸圖卡！");
-    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(selectedCard)}`;
-    window.open(fbUrl, '_blank');
-  };
+  document.getElementById('shareMascotBtn')?.addEventListener('click', async () => {
+    if (!selectedCard) {
+      alert("請先選擇一張聽丸圖卡！");
+      return;
+    }
 
-  document.getElementById('shareLINE').onclick = () => {
-    if (!selectedCard) return alert("請先選擇一張聽丸圖卡！");
-    const lineUrl = `https://line.me/R/msg/text/?我喜歡這張聽丸：${encodeURIComponent(selectedCard)}`;
-    window.open(lineUrl, '_blank');
-  };
+    const shareText = "我最喜歡這張聽丸圖卡，來看看你喜歡哪一張 👉";
+    const shareUrl = "https://alkatty-dot.github.io/listening-personality/mascot.html";
 
-  document.getElementById('downloadCard').onclick = () => {
-    if (!selectedCard) return alert("請先選擇一張聽丸圖卡！");
-    const a = document.createElement('a');
-    a.href = selectedCard;
-    a.download = "聽丸.jpg";
-    a.click();
-  };
+    try {
+      const response = await fetch(selectedCard);
+      const blob = await response.blob();
+      const file = new File([blob], "mascot.png", { type: "image/png" });
+
+      const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+      const canWebShare = navigator.canShare?.({ files: [file], url: shareUrl });
+
+      // ✅ 1. 支援 Web Share 的手機
+      if (isMobile && navigator.share && canWebShare) {
+        await navigator.share({
+          title: "我的聽丸分享",
+          text: shareText,
+          url: shareUrl,
+          files: [file]
+        });
+        return;
+      }
+
+      // ✅ 2. 桌機瀏覽器：直接下載圖片
+      if (!isMobile) {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = "聽丸.png";
+        a.click();
+        return;
+      }
+
+      // ✅ 3. fallback（如 LINE / FB App 內建瀏覽器）
+      const imageURL = URL.createObjectURL(blob);
+
+      // 移除舊的 fallback 預覽與按鈕
+      document.getElementById("mascotPreview")?.remove();
+      document.getElementById("mascotTip")?.remove();
+      document.getElementById("mascotCopyBtn")?.remove();
+      document.getElementById("mascotLineBtn")?.remove();
+
+      const img = document.createElement("img");
+      img.id = "mascotPreview";
+      img.src = imageURL;
+      img.style.width = "100%";
+      img.style.maxWidth = "500px";
+      img.style.marginTop = "20px";
+      img.style.border = "1px solid #ccc";
+      img.style.borderRadius = "8px";
+
+      const tip = document.createElement("p");
+      tip.id = "mascotTip";
+      tip.innerHTML = `📌 長按圖片儲存，再將網址分享給朋友：<br><a href="${shareUrl}" target="_blank">${shareUrl}</a>`;
+      tip.style.color = "#333";
+      tip.style.fontSize = "14px";
+      tip.style.marginTop = "10px";
+
+      const copyBtn = document.createElement("button");
+      copyBtn.id = "mascotCopyBtn";
+      copyBtn.textContent = "複製網址";
+      copyBtn.style.marginTop = "10px";
+      copyBtn.style.padding = "6px 12px";
+      copyBtn.style.fontSize = "14px";
+      copyBtn.style.cursor = "pointer";
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          alert("已複製網址，可以貼給朋友囉！");
+        });
+      });
+
+      const lineBtn = document.createElement("button");
+      lineBtn.id = "mascotLineBtn";
+      lineBtn.textContent = "分享到 LINE";
+      lineBtn.style.marginTop = "10px";
+      lineBtn.style.marginLeft = "10px";
+      lineBtn.style.padding = "6px 12px";
+      lineBtn.style.fontSize = "14px";
+      lineBtn.style.backgroundColor = "#06c755";
+      lineBtn.style.color = "#fff";
+      lineBtn.style.border = "none";
+      lineBtn.style.borderRadius = "5px";
+      lineBtn.style.cursor = "pointer";
+      lineBtn.addEventListener("click", () => {
+        const encodedURL = encodeURIComponent(shareUrl);
+        window.open(`https://social-plugins.line.me/lineit/share?url=${encodedURL}`, '_blank');
+      });
+
+      const container = document.querySelector(".mascot-result") || document.body;
+      container.appendChild(img);
+      container.appendChild(tip);
+      container.appendChild(copyBtn);
+      container.appendChild(lineBtn);
+
+    } catch (err) {
+      alert("分享失敗，請改用儲存圖片方式");
+      console.error("圖片分享錯誤：", err);
+    }
+  });
 }
+
 
 
 
