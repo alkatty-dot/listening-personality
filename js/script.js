@@ -423,6 +423,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("shareImageBtn")?.addEventListener("click", async () => {
   const resultCard = document.getElementById("resultCard");
+  const shareUrl = "https://alkatty-dot.github.io/listening-personality/quiz.html";
 
   try {
     const canvas = await html2canvas(resultCard, {
@@ -439,49 +440,82 @@ document.getElementById("shareImageBtn")?.addEventListener("click", async () => 
 
     const file = new File([blob], "result.png", { type: "image/png" });
 
-    console.log("navigator.share supported:", !!navigator.share);
-    console.log("canShare with file:", navigator.canShare?.({ files: [file] }));
-    console.log("userAgent:", navigator.userAgent);
-
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    // ✅ 嘗試使用 Web Share API 分享圖片＋網址
+    if (navigator.canShare && navigator.canShare({ files: [file], url: shareUrl })) {
       await navigator.share({
         title: "我的耳朵性格測驗結果",
         text: "來看看你是哪一型耳朵吧 👉",
+        url: shareUrl,
         files: [file]
       });
-    } else {
-      // 不支援分享圖片，顯示預覽圖片與手動分享提示
-      const imageURL = URL.createObjectURL(blob);
-
-      // 移除舊的預覽（如果有）
-      const existingPreview = document.getElementById("imagePreview");
-      if (existingPreview) existingPreview.remove();
-
-      // 建立新的預覽圖片
-      const img = document.createElement("img");
-      img.id = "imagePreview";
-      img.src = imageURL;
-      img.style.width = "100%";
-      img.style.maxWidth = "500px";
-      img.style.marginTop = "20px";
-      img.style.border = "1px solid #ccc";
-      img.style.borderRadius = "8px";
-
-      const tip = document.createElement("p");
-      tip.textContent = "長按圖片即可儲存並分享到 IG、LINE 或 Facebook";
-      tip.style.color = "#333";
-      tip.style.fontSize = "14px";
-      tip.style.marginTop = "10px";
-
-      const container = document.getElementById("result");
-      container.appendChild(img);
-      container.appendChild(tip);
+      return;
     }
+
+    // ❌ 不支援 navigator.share（例如 LINE 內建瀏覽器）→ fallback 模式
+    const imageURL = URL.createObjectURL(blob);
+
+    // 移除舊的預覽與按鈕（避免重複）
+    document.getElementById("imagePreview")?.remove();
+    document.getElementById("manualTip")?.remove();
+    document.getElementById("copyBtn")?.remove();
+    document.getElementById("lineShareBtn")?.remove();
+
+    const img = document.createElement("img");
+    img.id = "imagePreview";
+    img.src = imageURL;
+    img.style.width = "100%";
+    img.style.maxWidth = "500px";
+    img.style.marginTop = "20px";
+    img.style.border = "1px solid #ccc";
+    img.style.borderRadius = "8px";
+
+    const tip = document.createElement("p");
+    tip.id = "manualTip";
+    tip.innerHTML = `📌 長按圖片儲存，再把這個網址貼給朋友：<br><a href="${shareUrl}" target="_blank">${shareUrl}</a>`;
+    tip.style.color = "#333";
+    tip.style.fontSize = "14px";
+    tip.style.marginTop = "10px";
+
+    const copyBtn = document.createElement("button");
+    copyBtn.id = "copyBtn";
+    copyBtn.textContent = "複製網址";
+    copyBtn.style.marginTop = "10px";
+    copyBtn.style.padding = "6px 12px";
+    copyBtn.style.fontSize = "14px";
+    copyBtn.style.cursor = "pointer";
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert("已複製網址，可以貼給朋友囉！");
+      });
+    });
+
+    const lineBtn = document.createElement("button");
+    lineBtn.id = "lineShareBtn";
+    lineBtn.textContent = "分享到 LINE";
+    lineBtn.style.marginTop = "10px";
+    lineBtn.style.marginLeft = "10px";
+    lineBtn.style.padding = "6px 12px";
+    lineBtn.style.fontSize = "14px";
+    lineBtn.style.backgroundColor = "#06c755";
+    lineBtn.style.color = "#fff";
+    lineBtn.style.border = "none";
+    lineBtn.style.borderRadius = "5px";
+    lineBtn.style.cursor = "pointer";
+    lineBtn.addEventListener("click", () => {
+      const encodedURL = encodeURIComponent(shareUrl);
+      window.open(`https://social-plugins.line.me/lineit/share?url=${encodedURL}`, '_blank');
+    });
+
+    const container = document.getElementById("result");
+    container.appendChild(img);
+    container.appendChild(tip);
+    container.appendChild(copyBtn);
+    container.appendChild(lineBtn);
+
   } catch (error) {
     alert("分享失敗，請改用儲存圖片方式");
     console.error("分享錯誤：", error);
   }
-
 });
 
   document.getElementById("shareFB")?.addEventListener("click", () => {
